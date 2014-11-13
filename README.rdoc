@@ -1,0 +1,25 @@
+TODO: Code optimization for Angular & Rails.
+
+----------------------
+# Single field rails app with CRUD operations.
+Rails 4.1.5
+Ruby 2.1.2
+Angular 1.2.13
+Ubuntu 14.04LTS
+
+---------------------
+Steps to run app.
+1) Install Ruby 2.1.2
+2) Instaill Rails 4.1.5 
+   OR 
+   2a) cd Rails_Angular_Simplest_CRUD
+  #Install gems run below command
+3) bundle install
+  #Create db with below command
+4) rake db:migrate
+  #Dummy data run below command, OPTION
+5) rake db:seed
+ #Start server run below command
+6) rails s
+ #Open below link in browser
+7) http://localhost:3000

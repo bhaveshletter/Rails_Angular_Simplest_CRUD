@@ -1,0 +1,9 @@
+<ul ng-repeat="restaurant in restaurants">
+	<li>
+		<a href="/#/restaurants/{{restaurant.id}}">{{ restaurant.name }}</a> |		
+		<a href="/#/restaurants/{{restaurant.id}}/edit"> Edit </a> |
+		<a href="#" ng-click="delete_record(restaurant.id)"> Delete </a>
+	</li>
+</ul>
+
+<a href="/#/restaurants/new">Add Restaurant</a>
