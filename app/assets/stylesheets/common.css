@@ -1,1 +1,24 @@
-a { cursor:pointer; }
+a { 
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* unvisited link */
+a:link {
+	color: #0066FF;
+}
+
+/* visited link */
+a:visited {
+	color: #3399FF;
+}
+
+/* mouse over link */
+a:hover {
+	color:  #33CCCC;
+}
+
+/* selected link */
+a:active {
+	color: #CC99FF;
+}
