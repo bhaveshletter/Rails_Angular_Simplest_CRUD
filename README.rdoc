@@ -29,7 +29,7 @@ Steps to run app.
 
   rake db:migrate
   
-5) Dummy data run below command, OPTIONAL
+5) Sample data feed run below command, OPTIONAL
 
   rake db:seed
  
