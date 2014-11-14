@@ -3,7 +3,7 @@ restaurants.controller('RestaurantEditCtrl', ['$scope', '$http', '$routeParams',
 		scope.name = data.name
 	})
 
-	scope.create_new = function(){
+	scope.submit = function(){
 		if(scope.name){
 			http.put('./restaurants/' + routeParams.id + '.json', {name: scope.name}).success(function(data){
 				location.path('/restaurants/' + data.id);
