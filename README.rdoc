@@ -13,20 +13,26 @@ Steps to run app.
 1) Install Ruby 2.1.2
 
 2) Instaill Rails 4.1.5 
-   OR 
+   OR
    2a) cd Rails_Angular_Simplest_CRUD
 
-  #Install gems run below command
-3) bundle install
+  
+3) Install gems run below command
 
-  #Create db run below command
-4) rake db:migrate
+  bundle install
+  
+4) Create db run below command
 
-  #Dummy data run below command, OPTION
-5) rake db:seed
+  rake db:migrate
+  
+5) Dummy data run below command, OPTIONAL
 
- #Start server run below command
-6) rails s
+  rake db:seed
+ 
+6) Start server run below command
 
- #Open below link in browser
-7) http://localhost:3000
+  rails s
+
+7) Open below link in browser
+
+  http://localhost:3000
