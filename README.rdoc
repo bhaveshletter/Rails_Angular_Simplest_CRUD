@@ -19,7 +19,7 @@ Steps to run app.
   #Install gems run below command
 3) bundle install
 
-  #Create db with below command
+  #Create db run below command
 4) rake db:migrate
 
   #Dummy data run below command, OPTION
