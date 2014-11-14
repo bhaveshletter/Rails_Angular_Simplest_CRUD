@@ -1,4 +1,4 @@
-TODO: Code optimization for Angular & Rails.
+TODO: Code optimization for AngularJS & Rails.
 
 ----------------------
 # Single field rails app with CRUD operations using AngularJS.
