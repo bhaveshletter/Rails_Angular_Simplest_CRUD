@@ -5,6 +5,8 @@ restaurants.controller('RestaurantCreateCtrl', ['$scope', '$http', '$location', 
 			http.post('./restaurants.json', {name: scope.name}).success(function(data){
 				location.path('/restaurants/' + data.id);
 			})
+		}else{
+			scope.errorStatus = true;
 		}
 	}
 

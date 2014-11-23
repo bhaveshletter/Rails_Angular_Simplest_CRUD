@@ -8,6 +8,8 @@ restaurants.controller('RestaurantEditCtrl', ['$scope', '$http', '$routeParams',
 			http.put('./restaurants/' + routeParams.id + '.json', {name: scope.name}).success(function(data){
 				location.path('/restaurants/' + data.id);
 			})
+		}else{
+			scope.errorStatus = true;
 		}
 	}
 
