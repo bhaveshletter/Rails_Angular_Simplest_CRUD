@@ -1,7 +1,12 @@
-<span ng-show="errorStatus"> 
-	Name is mandatory!
-</span>
-<form name="createRestaurant">
-  <input type="text" ng-model="name">
-  <button type="submit" ng-click="submit();"> Save </button>
+<div class="alert alert-warning top5" role="alert" ng-show="errorStatus">
+	Restaurant Name is mandatory!
+</div>
+
+<form class="form-inline top5" role="form" name="createRestaurant">
+	<div class="form-group">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Enter restaurant name!" ng-model="name"> 
+		</div>
+	</div>
+	<button type="submit" class="btn btn-success" role="button" ng-click="submit();"> Save </button>
 </form>

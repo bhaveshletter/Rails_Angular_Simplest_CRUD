@@ -1,10 +1,18 @@
-<ul ng-repeat="restaurant in restaurants">
-	<li>
-		{{ restaurant.name }} |
-		<a href="/#/restaurants/{{restaurant.id}}"> Show </a> |		
-		<a href="/#/restaurants/{{restaurant.id}}/edit"> Edit </a> |
-		<a ng-click="delete_record(restaurant.id)"> Delete </a>
+<ul class="list-group top5" ng-repeat="restaurant in restaurants">
+	<li class="list-group-item list-group-item-info">
+		{{ restaurant.name }}
+		<a href="/#/restaurants/{{restaurant.id}}" class="btn btn-primary" role="button"> 
+			Show 
+		</a>
+		<a href="/#/restaurants/{{restaurant.id}}/edit" class="btn btn-info" role="button">
+			Edit
+		</a>
+		<a ng-click="delete_record(restaurant.id)" class="btn btn-danger" role="button">
+			Delete 
+		</a>
 	</li>
 </ul>
 
-<a href="/#/restaurants/new"> Add Restaurant </a>
+<a href="/#/restaurants/new" class="btn btn-primary", role="button">
+	Add Restaurant
+</a>
