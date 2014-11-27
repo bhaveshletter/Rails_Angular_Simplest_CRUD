@@ -1,8 +1,8 @@
-restaurants.controller('RestaurantCreateCtrl', ['$scope', '$http', '$location', function(scope, http, location){
+restaurants.controller('RestaurantCreateCtrl', ['$scope', '$location', 'restaurantFactory', function(scope, location, restaurantFactory){
 	
 	scope.submit = function(){
 		if(scope.name){
-			http.post('./restaurants.json', {name: scope.name}).success(function(data){
+			restaurantFactory.createRestaurant({name: scope.name}).then(function(data){
 				location.path('/restaurants/' + data.id)
 			})
 		}else{

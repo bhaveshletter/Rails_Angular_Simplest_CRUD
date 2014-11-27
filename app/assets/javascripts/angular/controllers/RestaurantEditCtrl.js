@@ -1,12 +1,13 @@
-restaurants.controller('RestaurantEditCtrl', ['$scope', '$http', '$routeParams', '$location', function(scope, http, routeParams, location){
-	http.get('./restaurants/' + routeParams.id + '.json').success(function(data){
-		scope.name = data.name
+restaurants.controller('RestaurantEditCtrl', ['$scope', '$routeParams', '$location', 'restaurantFactory', function(scope, routeParams, location, restaurantFactory){
+
+	restaurantFactory.getRestaurant(routeParams.id).then(function(restaurant){
+		scope.name = restaurant.name
 	})
 
 	scope.submit = function(){
 		if(scope.name){
-			http.put('./restaurants/' + routeParams.id + '.json', {name: scope.name}).success(function(data){
-				location.path('/restaurants/' + data.id)
+			restaurantFactory.updateRestaurant(routeParams.id, {name: scope.name}).then(function(updatedRestaurant){
+				location.path('/restaurants/' + updatedRestaurant.id)
 			})
 		}else{
 			scope.errorStatus = true
