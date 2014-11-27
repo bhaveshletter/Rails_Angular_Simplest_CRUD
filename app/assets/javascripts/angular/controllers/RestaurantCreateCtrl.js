@@ -3,10 +3,10 @@ restaurants.controller('RestaurantCreateCtrl', ['$scope', '$http', '$location', 
 	scope.submit = function(){
 		if(scope.name){
 			http.post('./restaurants.json', {name: scope.name}).success(function(data){
-				location.path('/restaurants/' + data.id);
+				location.path('/restaurants/' + data.id)
 			})
 		}else{
-			scope.errorStatus = true;
+			scope.errorStatus = true
 		}
 	}
 

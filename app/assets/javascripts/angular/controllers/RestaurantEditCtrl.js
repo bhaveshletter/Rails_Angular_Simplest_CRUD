@@ -6,10 +6,10 @@ restaurants.controller('RestaurantEditCtrl', ['$scope', '$http', '$routeParams',
 	scope.submit = function(){
 		if(scope.name){
 			http.put('./restaurants/' + routeParams.id + '.json', {name: scope.name}).success(function(data){
-				location.path('/restaurants/' + data.id);
+				location.path('/restaurants/' + data.id)
 			})
 		}else{
-			scope.errorStatus = true;
+			scope.errorStatus = true
 		}
 	}
 
